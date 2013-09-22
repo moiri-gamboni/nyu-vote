@@ -1,0 +1,43 @@
+<template name="electionsAdminList">
+  {{#each elections}}
+    {{#if notModifying}}
+    <table border="1" class="table table-striped table-bordered table-hover table-condensed">
+      <tr>
+        <td><button class="openCloseElection btn btn-primary" href="#">{{openCloseElection}} Election</button></td>
+        <td><button class="deleteElection btn btn-primary" href="#">Delete Election</button></td>
+      </tr>
+      <tr>
+        <td>{{name}}</td>
+      </tr>
+      <tr>
+        <td>{{description}}</td>
+      </tr>
+      <tr>
+        <td>Creator: {{creator}}</td>
+      </tr>
+      <tr>
+        <td>Total Votes: {{voteCountTotal}}</td>
+      </tr>
+      <tr>
+        <td>Groups:</td>
+      </tr>
+      <tr><td>
+        <select multiple="multiple">
+          {{#each groups}}
+            <option>{{name}}</option>
+          {{/each}}
+        </select>
+      </td></tr>
+      <tr>
+        <td>Questions:</td>
+      </tr>
+      {{#each questions}}
+        {{>electionsAdminQuestion}}
+      {{/each}}
+    </table>
+    <button class="modifyElection btn btn-primary" href="#" >Edit this Election</button><br/><br/>
+    {{else}}
+      {{>electionsAdminModify}}
+    {{/if}}
+  {{/each}}
+</template>

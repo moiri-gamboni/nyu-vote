@@ -1,0 +1,33 @@
+<template name="electionsQuestions">
+	<div id="headerbanner">
+		<div  class="questiontitle">
+			<div class="questionsbox">
+		 		{{name}}<br/>
+		 	</div>
+		 </div>
+		 	
+
+		<div class = "arrowdownblack"></div>
+	</div>
+	<div class="questiondescription text-muted"> 
+    {{#if required}}
+    <p>
+      This question is requied
+    </p>
+    {{/if}}
+    <p>
+      {{description}}
+    </p>
+	</div>
+  <div class="choices row abstain-{{options.allowAbstain}}" data-multi="{{options.multi}}">
+		  {{#each choices}}
+
+		    {{>electionsChoice}}
+
+		  {{/each}}
+      {{#if options.allowAbstain}}
+        {{>electionsChoice abstain}}
+      {{/if}}
+		</div>
+</template>
+

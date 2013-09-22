@@ -1,0 +1,36 @@
+<template name="electionsAdminModify">
+  <form class="election-form">
+    <input type="hidden" name="_id" value="{{_id}}">
+    <table border="1" class="table table-striped table-bordered table-hover table-condensed">
+      <tr>
+        <td><input class="election name" type="text" placeholder="{{name}}" value="{{name}}"></td>
+      </tr>
+      <tr>
+        <td><input class="election description" type="text" placeholder="{{description}}" value="{{description}}"></td>
+      </tr>
+      <tr>
+        <td>Creator: {{creator}}</td>
+      </tr>
+      <tr>
+        <td>Groups:</td>
+      </tr>
+      <tr>
+        <td>
+          <select class="election groups" multiple="multiple">
+            {{#each groups}}
+              <option value="{{_id}}">{{name}}</option>
+            {{/each}}
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Questions:</td>
+      </tr>
+      {{#each questions}}
+        {{>electionsAdminModifyQuestion}}
+      {{/each}}
+      {{>electionsAdminModifyNewQuestion}}
+    </table>
+  </form>
+  <button class="submitElection btn btn-primary" href="#">Submit this Election</button>
+</template>

@@ -1,0 +1,26 @@
+<template name="electionsAdminQuestion">
+  <tr>
+    <td></td>
+    <td>{{name}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>{{description}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Question Votes: {{voteCountQuestion}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>{{allowAbstain}} Abstention</td>
+    <td>{{multi}} Choice</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Choices:</td>
+  </tr>
+  {{#each choices}}
+    {{>electionsAdminChoice}}
+  {{/each}}
+</template>
