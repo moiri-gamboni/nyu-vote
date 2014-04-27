@@ -1,9 +1,17 @@
 root = global ? window
 Deps.autorun(() ->
-  if Router.current()?.route.name == "admin"
+  root.usersHandle = Meteor.subscribe("userData")
+  if /admin/.test(Router.current()?.route.name)
     root.adminElectionsHandle = Meteor.subscribe("adminElections")
-    Meteor.subscribe("adminGroups")
+    root.adminGroupsHandle = Meteor.subscribe("adminGroups")
+    root.adminWhitelistHandle = Meteor.subscribe("adminWhitelist")
+    Deps.autorun(() ->
+      user = Meteor.user()
+      if user?.isGlobalAdmin()
+        root.globalAdminElectionsHandle = Meteor.subscribe("globalAdminElections")
+        root.globalAdminGroupsHandle = Meteor.subscribe("globalAdminGroups")
+    )
   else
-    root.electionsHandle = Meteor.subscribe("elections")
-    root.votedElections = Meteor.subscribe("votedElections")
+    root.electionsHandle = Meteor.subscribe("voterElections")
+    root.ballotsHandle = Meteor.subscribe("voterBallots")
 )

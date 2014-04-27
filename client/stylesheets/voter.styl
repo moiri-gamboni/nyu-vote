@@ -1,0 +1,283 @@
+minimum = 320px
+mobile = 480px
+tablet = 768px
+laptop = 940px
+desktop = 1210px
+
+purple = #7B57A1
+light-green = #9ECE8D
+green = #5EB955
+blue = #0CACA9
+light-blue = #55B7B6
+darkest-blue = #549090
+deep-blue = #005858
+
+text-black = #4F4F4F
+light-grey = #c2c2c2
+
+thick = 700
+thin = 400
+
+// html, body, div, a
+//   color: black !important
+body
+	font-family: Montserrat
+	word-break: break-word
+
+.purple-bg
+	background-color: purple
+.light-green-bg
+	background-color: light-green
+.white-bg
+	background-color: white
+	color: text-black
+.dark-blue-bg
+	background-color darkest-blue
+.deep-blue-bg
+	background-color deep-blue
+.light-blue-bg
+	background-color light-blue
+.green-bg
+	background-color green
+.incomplete-bg
+	background-color: #F0B1B4
+
+.header
+	line-height: 20px
+	vertical-align: middle
+
+.valid
+	background-color: green !important
+
+.invalid
+	background-color: blue !important
+
+.current
+	border: solid 1px black
+
+#container
+	color: white
+	background-color: darkest-blue
+	text-align: center
+	text-transform: uppercase
+	position: absolute
+	min-width: 300px
+	width: 100%
+	height: 100%
+	h1
+		font-size: 6em
+		position: relative
+		width: 100%
+		padding-bottom: 30px
+		margin 0
+	h2 
+		font-size: 2.5em
+		margin 0 auto
+	h3
+		font-size: 1.8em
+		margin 0 auto
+		font-weight 400
+	a
+		color: white
+		text-decoration: none
+	.light-grey
+		color: light-grey
+	.header
+		padding: 5px 75px
+		vertical-align: middle
+		word-break normal
+		white-space normal
+		a
+			color light-grey
+			position absolute
+			left 20px
+	.body-text
+		font-family: lato
+		text-transform: none
+		font-weight 300
+		margin 20px 0
+		text-align left
+
+.content-wrapper
+	height: 100%
+
+// LOGIN SCREEN
+#login-info
+	height: 250px
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	margin: auto
+	h1
+		padding-bottom 15px
+.login-caption
+	font-family lato
+	font-weight 300
+	text-transform none
+	margin 0
+.large-button
+	margin 0 auto
+	font-size: 1.3em
+	border: 1px solid
+	padding 5px 20px
+	display block
+	max-width 300px
+	&:hover
+		background-color: rgba(255,255,255,0.4)
+		cursor: pointer
+
+//ABOUT SCREEN
+#about-screen
+	.light-grey
+		color: light-grey
+	.centered-container
+		max-width 500px
+	.large-button
+		margin-top 30px
+	// p
+	// 	max-width: 50%
+	// 	margin: 0 auto !important
+
+// ELECTION LIST
+#election-list
+	h1
+		padding-bottom 0
+		margin -5px 0
+	h2
+		margin-bottom 20px
+	#ballot-counter
+		margin-bottom 30px
+	#ballot-list-footer
+		padding-bottom: 50px
+	#about-link
+		margin-bottom: 20px
+	.header
+		padding 5px 20px
+
+.election-list-item
+	padding: 20px 0
+	position relative
+	&:hover
+		background-color: rgba(255, 255, 255, 0.2)
+	// .ballot-name
+	// 	padding 0 50px
+	h3
+		display: inline-block
+		padding 0 40px
+	#right-arrow
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		margin: auto 0
+		padding 0
+		height: 30px
+		margin-right: 20px
+		
+.centered-container
+	max-width 800px
+	margin 0 auto
+	padding 30px 20px
+
+//BALLOT DESCRIPTION
+#ballot-description-wrapper
+	margin-top 10%
+	p
+		margin-bottom 30px
+
+//VOTING SCREEN
+.circular-photo
+	height: 200px
+	width: 200px
+	display: inline-block
+	margin-right: 5px
+	overflow: hidden
+	border-radius: 100%
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+#voting-screen
+	padding-bottom 140px
+	.centered-container
+		padding 20px 20px
+	//Just for the header description
+	.deep-blue-bg
+		.body-text
+			margin: 10px 0 0 0
+			text-align	center
+
+#election-footer
+	height 120px
+	padding 10px 0
+	color text-black
+	position fixed
+	right 0
+	left 0
+	bottom 0
+	background-color rgba(255,255,255,0.8)
+	p
+		font-size 1.6em
+		font-weight 600
+		margin 0
+	.button-black
+		background-color: #1F1F1F
+		border: 2px solid #5C5C5C
+	.disabled
+		background-color: #D1D1D1
+		border: 2px solid #5C5C5C
+	.review
+		background-color: light-green
+	.review-final
+		background-color green
+	.progress-circle
+		margin: 4px 3px
+		height 30px
+		width 30px
+		display inline-block
+		border-radius 50%
+	#election-footer-wrapper
+		padding 0
+	#election-footer-button
+		padding 0px 20px
+
+//REVIEW SCREEN
+#review-screen
+	padding-bottom 140px
+	.deep-blue-bg
+		#question-description
+			margin-bottom 0
+	#question-container
+		padding-top 10px
+		padding-bottom 10px
+
+@media screen and (max-width: 480px)
+	#container
+		h1
+			font-size: 3.5em
+		h2
+			font-size 2.0em
+			padding-top 10px
+			padding-bottom 10px
+		h3
+			font-size 1.5em
+		#election-list
+			h1
+				padding-bottom 0
+				margin 0
+		#voting-screen
+			padding-bottom: 105px
+			.centered-container
+				padding-bottom 10
+			#election-footer
+				height 100px
+				padding 3px 0px 0px 0px
+				p
+					font-size 1.2em
+				.large-button
+					padding 2px 20px
+				.progress-circle
+					margin 0px 3px
+			#election-footer-button
+				padding 0 20px
