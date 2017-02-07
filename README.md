@@ -1,2 +1,1 @@
-Moiri is cool
-NYU Voting System
+Voting system used in NYUAD and other campuses built with Meteor.
